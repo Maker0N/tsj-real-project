@@ -1,10 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 #root {
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: beige;
+  background: #708090;
   height: 100vh;
 }
+
+input {
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  padding: 5px 7px;
+  margin: 5px 0 5px 0;
+}
+
+.login-input {
+  margin-bottom: 10px;
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .initial {
   color: #000;
