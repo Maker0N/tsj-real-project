@@ -1,10 +1,125 @@
+body {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
 #root {
   display: flex;
   justify-content: center;
   align-items: center;
   background: beige;
   height: 100vh;
+  width: 100vw;
 }
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background: yellow;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.table-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: gray;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flat-cart {
+  height: 5rem;
+  width: 5rem;
+  border: 1px solid;
+  border-radius: 7px;
+  margin: 1px;
+  padding: 10px;
+  background: #D3D3D3;
+}
+
+.flat-cart:hover {
+  background: orange;
+}
+
+.current-flat-info.hidden {
+  width: 0;
+  height: 0;
+  transition: 1s ease;
+}
+
+.current-flat-info {
+  position: absolute;
+  background: #5F9EA0;
+  top: 10rem;
+  left: 25%;
+  height: 26rem;
+  width: 28rem;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 1s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .initial {
   color: #000;
