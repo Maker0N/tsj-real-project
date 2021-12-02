@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import FlatInfo from '../FlatInfo/FlatInfo'
-// import mainReducer from '../../redux/mainReducer'
 
 const Main = () => {
   const [flat, setFlat] = useState(0)
   const [hidden, setHidden] = useState(true)
-  const { quantFlats } = useSelector((s) => s.mainReducer)
+  const { quantFlats, flatsList } = useSelector((s) => s.mainReducer)
   const flats = Array(quantFlats).fill(0).map((item, index) => index + 1)
+
   return (
     <div
       className="table-wrapper"
@@ -41,8 +41,21 @@ const Main = () => {
         <div className="title">Квартиры</div>
         <div className="table">
           {flats.map((it) => {
-            const flatClass = `flat-cart ${it}`
-            return (<div className={flatClass} data-flat={it} key={it}>{it}</div>)
+            let classFlat = `flat-cart ${it}`
+            flatsList.forEach((item) => {
+              if (it === item.id) {
+                classFlat = `flat-cart ${it} flash`
+              }
+            })
+            return (
+              <div
+                className={classFlat}
+                data-flat={it}
+                key={it}
+              >
+                {it}
+              </div>
+            )
           })}
         </div>
         <FlatInfo flat={flat} hidden={hidden} />
