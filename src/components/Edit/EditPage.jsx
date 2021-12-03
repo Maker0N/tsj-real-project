@@ -2,12 +2,12 @@
 import React, { useState } from 'react'
 import {
   useSelector,
-  // useDispatch
+  useDispatch,
 } from 'react-redux'
-// import { addFlatInfo } from '../../redux/mainReducer'
+import { addFlatInfo } from '../../redux/mainReducer'
 
 const EditPage = () => {
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
   const { flatsList } = useSelector((s) => s.mainReducer)
   const currentEditFlat = JSON.parse(localStorage.getItem('currentEditFlat'))
   const currentFlat = flatsList.filter((it) => it.id === Number(currentEditFlat))
@@ -90,7 +90,7 @@ const EditPage = () => {
                   flatsListArr = [...flatsListArr, squareOwner]
                   localStorage.setItem('flatsList', JSON.stringify(flatsListArr))
                 }
-                // dispatch(addFlatInfo(squareOwner))
+                dispatch(addFlatInfo(squareOwner))
                 clearInput()
               }}
             >
