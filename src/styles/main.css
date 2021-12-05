@@ -10,6 +10,10 @@
   height: 100vh;
 }
 
+.main-login {
+  height: 40%;
+}
+
 input {
   outline: none;
   border: none;
@@ -28,11 +32,19 @@ input {
   align-items: center;
 }
 
+.sign-up {
+  cursor: pointer;
+}
+
 .button {
   border: none;
   border-radius: 5px;
   padding: 5px;
   margin: 5px 15px;
+}
+
+.form-confirm-password {
+  margin-top: 20px;
 }
 
 .form-confirm-password-hidden {

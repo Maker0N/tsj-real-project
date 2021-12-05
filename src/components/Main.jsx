@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import bull from '../img/bull.png'
 import '../styles/main.css'
 
-const App = () => {
+const Main = () => {
   const [rotate, setRotate] = useState('initial')
   const clearEffect = () => {
     setRotate('back')
@@ -34,4 +34,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Main
