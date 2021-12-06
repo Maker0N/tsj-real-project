@@ -83,13 +83,13 @@ const EditPage = () => {
               type="button"
               onClick={(e) => {
                 e.preventDefault()
-                if (!JSON.parse(localStorage.getItem('flatsList'))) {
-                  localStorage.setItem('flatsList', JSON.stringify([squareOwner]))
-                } else {
-                  let flatsListArr = JSON.parse(localStorage.getItem('flatsList'))
-                  flatsListArr = [...flatsListArr, squareOwner]
-                  localStorage.setItem('flatsList', JSON.stringify(flatsListArr))
-                }
+                // if (!JSON.parse(localStorage.getItem('flatsList'))) {
+                //   localStorage.setItem('flatsList', JSON.stringify([squareOwner]))
+                // } else {
+                //   let flatsListArr = JSON.parse(localStorage.getItem('flatsList'))
+                //   flatsListArr = [...flatsListArr, squareOwner]
+                //   localStorage.setItem('flatsList', JSON.stringify(flatsListArr))
+                // }
                 dispatch(addFlatInfo(squareOwner))
                 clearInput()
               }}
