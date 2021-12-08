@@ -7,6 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const config = {
+  devtool: 'source-map',
   entry: './src/index.jsx',
   mode: 'development',
   output: {
@@ -18,6 +19,7 @@ const config = {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   devServer: {
+    historyApiFallback: true,
     hot: true,
     open: true,
     static: {

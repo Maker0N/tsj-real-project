@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+body {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
 #root {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -8,6 +14,56 @@
   align-items: center;
   background: #708090;
   height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background: yellow;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.table-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: gray;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flat-cart {
+  height: 5rem;
+  width: 5rem;
+  border: 1px solid;
+  border-radius: 7px;
+  margin: 1px;
+  padding: 10px;
+  background: #D3D3D3;
+}
+
+.flash {
+  background: green;
+}
+
+.flat-cart:hover {
+  background: orange;
 }
 
 .main-login {
@@ -57,56 +113,62 @@ input {
   justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.initial {
-  color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #4682B4;
-  height: 180px;
-  width: 300px;
-  border-radius: 20px;
-  font-size: 2em;
+.current-flat-info.hidden {
+  width: 0;
+  height: 0;
+  transition: 1s ease;
 }
 
-.rotate {
-  transform: rotate3d(1, 2.0, 3.0, -360deg) translateY(-300px);
-  transition: 4s;
-  color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #4682B4;
-  height: 180px;
-  width: 300px;
-  border-radius: 20px;
-  font-size: 2em;
+.current-flat-info {
+  position: absolute;
+  background: #5F9EA0;
+  top: 10rem;
+  left: 25%;
+  height: 26rem;
+  width: 28rem;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 1s ease;
 }
 
-.back {
-  transform: rotate3d(1, 2.0, 3.0, 360deg) translateY(0px);
-  transition: 4s;
-  color: #000;
+.main-edit {
+  background: gray;
+  height: 100%;
+}
+
+.edit-wrapper {
+  display: flex;
+}
+
+.number-info {
+  width: 25%;
+}
+
+.number {
+  height: 12rem;
+  font-size: 16rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #4682B4;;
-  height: 180px;
-  width: 300px;
-  border-radius: 20px;
-  font-size: 2em;
+}
+
+.edit-info {
+ padding: 5px;
+}
+
+.edit-input {
+  padding: 20px 50px;
+  width: 75%;
+}
+
+.input {
+  display: block;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.edit-button {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
